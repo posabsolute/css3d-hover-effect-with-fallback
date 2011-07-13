@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  dir="ltr" lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Dashboard &lsaquo; Position Absolute, resources for the web developer  &#8212; WordPress</title>
+
+<style>
+.containerCard {
+	height:194px;
+	position:relative;
+	background:#fff;
+	width:144px;
+}
+	.containerCard .element{
+		height:194px;
+		position:absolute;
+		top:0; left:0;
+		background:#fff;
+		width:144px;
+	}
+	.containerCard .elementB{
+		display:none;
+	}	
+
+		.containerCard:hover .elementA {
+			display:none;
+		}
+		.containerCard:hover .elementB{
+			display:block;
+		}
+
+
+		@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+			.containerCard .elementB{
+				-webkit-transform: rotateY(-180deg);
+				-webkit-transform-style: preserve-3d;
+				-webkit-backface-visibility: hidden;
+
+				/* -- transition is the magic sauce for animation -- */
+				transition: all .4s ease-in-out;
+				-moz-transition: all .4s ease-in-out;
+				-webkit-transition: all .4s ease-in-out;
+			}	
+			.containerCard .elementA{
+				-webkit-transform: rotateY(0deg);
+				-webkit-transform-style: preserve-3d;
+				-webkit-backface-visibility: hidden;
+
+				/* -- transition is the magic sauce for animation -- */
+				transition: all .4s ease-in-out;
+				-moz-transition: all .4s ease-in-out;
+				-webkit-transition: all .4s ease-in-out;
+			}
+
+				.containerCard:hover .elementA{
+					-webkit-transform: rotateY(180deg);
+				}
+				.containerCard:hover .elementB{
+					-webkit-transform: rotateY(0deg);
+				}
+				.containerCard{
+					-webkit-perspective: 600;
+				}
+		     	.containerCard:hover .elementA{
+					display:block;
+				}
+				.containerCard .elementB{display:block;}		
+		}
+
+		@media screen and (-moz-min-device-pixel-ratio:0) {
+
+			.listingCampaign .caption .textImg{
+				-moz-transform: rotateY(-180deg);
+				-moz-transform-style: preserve-3d;
+				-moz-backface-visibility: hidden;
+
+				/* -- transition is the magic sauce for animation -- */
+				transition: all .4s ease-in-out;
+				-moz-transition: all .4s ease-in-out;
+				-moz-transition: all .4s ease-in-out;
+			}	
+			.listingCampaign .caption img{
+				-moz-transform: rotateY(0deg);
+				-moz-transform-style: preserve-3d;
+				-moz-backface-visibility: hidden;
+
+				/* -- transition is the magic sauce for animation -- */
+				transition: all .4s ease-in-out;
+				-moz-transition: all .4s ease-in-out;
+				-webkit-transition: all .4s ease-in-out;
+			}
+
+				.listingCampaign .caption a:hover img{
+					-moz-transform: rotateY(180deg);
+				}
+				.listingCampaign .caption a:hover .textImg{
+					-moz-transform: rotateY(0deg);
+				}
+				.listingCampaign .caption a{
+					-moz-perspective: 600;
+				}
+		     	.listingCampaign .caption a:hover img{
+					display:block;
+				}
+				.listingCampaign .caption .textImg{display:block;}		
+		}			
+	
+</style>
+<body >
+<div class="containerCard">
+	<div class="elementA element"><img src="back.jpg" width="144" height="194" alt="Back"></div>
+	<div class="elementB element"><img src="king.jpg" width="144" height="194" alt="Back"></div>
+</div>	
+</body>
+</html>
